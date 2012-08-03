@@ -8,5 +8,9 @@
     
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
+    
+    
+    <string name="turning_wifi_on">Turning Wifi On</string>
+    <string name="turning_wifi_off">Wifi off</string>
 
 </resources>

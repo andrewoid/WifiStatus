@@ -28,7 +28,7 @@
         </activity>
         
         <activity
-            android:name=".ToggleWifi"
+            android:name=".ToggleWifiActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Dialog" >
         </activity>

@@ -2,11 +2,12 @@ package com.schwimmer.android.wifistatus;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class ToggleWifi extends Activity {
+public class ToggleWifiActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,11 +23,14 @@ public class ToggleWifi extends Activity {
 	}
 
 	private void showToast(boolean enabled) {
+		Resources resources = getResources();
 		if (enabled) {
-			Toast.makeText(ToggleWifi.this, "Wifi OFF.", Toast.LENGTH_SHORT)
+			String s = resources.getString(R.string.turning_wifi_off);
+			Toast.makeText(ToggleWifiActivity.this, s, Toast.LENGTH_SHORT)
 					.show();
 		} else {
-			Toast.makeText(ToggleWifi.this, "Turning Wifi ON...",
+			String s = resources.getString(R.string.turning_wifi_on);
+			Toast.makeText(ToggleWifiActivity.this, s,
 					Toast.LENGTH_SHORT).show();
 		}
 	}
