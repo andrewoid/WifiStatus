@@ -19,10 +19,10 @@ import android.net.wifi.WifiManager;
 
 public class WifiStatusReceiver extends BroadcastReceiver {
 
-	private TrayControl trayControl;
+	private NotificationHelper trayControl;
 
 	public WifiStatusReceiver() {
-		trayControl = new TrayControl();
+		trayControl = new NotificationHelper();
 		
 	}
 

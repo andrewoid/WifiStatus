@@ -6,7 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
-public class TrayControl {
+public class NotificationHelper {
 
 	public void add(Context context, int iconId, String title,
 			String instructions, Intent launchIntent) {
