@@ -1,8 +1,6 @@
 package com.schwimmer.android.wifistatus;
 
-import static android.content.Context.WIFI_SERVICE;
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.Resources;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -12,14 +10,16 @@ public class ToggleWifiActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		toggleWifi();
+		finish();
+	}
 
+	private void toggleWifi() {
 		WifiManager manager = (WifiManager) getSystemService(WIFI_SERVICE);
 
 		boolean enabled = manager.isWifiEnabled();
 		showToast(enabled);
 		manager.setWifiEnabled(!enabled);
-
-		finish();
 	}
 
 	private void showToast(boolean enabled) {

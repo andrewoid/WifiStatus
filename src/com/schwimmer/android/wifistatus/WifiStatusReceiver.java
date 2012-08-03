@@ -17,13 +17,13 @@ import android.net.NetworkInfo;
 import android.net.NetworkInfo.DetailedState;
 import android.net.wifi.WifiManager;
 
+// TODO: this class does too much
 public class WifiStatusReceiver extends BroadcastReceiver {
 
 	private NotificationHelper trayControl;
 
 	public WifiStatusReceiver() {
 		trayControl = new NotificationHelper();
-		
 	}
 
 	private void onConnected(Context context) {	
